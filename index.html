@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIQ — Smart Solutions for Tomorrow</title>
+  <meta name="description" content="AIQ delivers smart solutions for tomorrow — Application Development, IT Consulting, AI Ads & Media, Automation, and Network Setup." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ─── Canvas Background ─── -->
+  <canvas id="gridCanvas"></canvas>
+
+  <!-- ─── Navigation ─── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand">
+        <img src="assets/logo.png" alt="AIQ Logo" class="nav-logo" />
+        <span class="nav-name">AIQ</span>
+      </a>
+      <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="navLinks" class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="nav-cta">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ─── -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-label reveal">Welcome to AIQ</p>
+      <h1 class="hero-title reveal">
+        Smart Solutions<br />
+        <span class="gradient-text">for Tomorrow</span>
+      </h1>
+      <p class="hero-sub reveal">We engineer cutting-edge digital experiences — from intelligent applications to fully automated infrastructure.</p>
+      <div class="hero-actions reveal">
+        <a href="#services" class="btn btn-primary">Explore Services</a>
+        <a href="#contact" class="btn btn-ghost">Contact Us</a>
+      </div>
+    </div>
+    <div class="hero-glow"></div>
+  </section>
+
+  <!-- ─── Services ─── -->
+  <section id="services">
+    <div class="section-inner">
+      <p class="section-label reveal">What We Do</p>
+      <h2 class="section-title reveal">Our Services</h2>
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Application Development</h3>
+          <p>Web, desktop & mobile applications built with modern architectures for performance, scale, and seamless user experiences.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>IT Infra Consulting</h3>
+          <p>Strategic infrastructure planning and migration guidance to future-proof your technology stack and reduce costs.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>AI Ads &amp; Media</h3>
+          <p>Leverage artificial intelligence to create hyper-targeted advertising campaigns and compelling media content.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>Automation</h3>
+          <p>Streamline your existing workflows with intelligent automation — eliminating repetitive tasks and boosting productivity.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="22" height="12" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/><circle cx="7" cy="14" r="1"/><circle cx="12" cy="14" r="1"/><circle cx="17" cy="14" r="1"/></svg>
+          </div>
+          <h3>Network Setup</h3>
+          <p>End-to-end network design, deployment, and security — ensuring reliable connectivity for your business operations.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── About ─── -->
+  <section id="about">
+    <div class="section-inner about-grid">
+      <div class="about-text">
+        <p class="section-label reveal">Who We Are</p>
+        <h2 class="section-title reveal">Built for the Future</h2>
+        <p class="about-desc reveal">At AIQ, we believe technology should simplify complexity. Our team of engineers, designers, and strategists partner with businesses of every scale to deliver solutions that are intelligent, efficient, and built to last.</p>
+        <p class="about-desc reveal">From a single mobile app to an enterprise-wide digital transformation — we approach every challenge with the same commitment to quality and innovation.</p>
+        <div class="about-stats reveal">
+          <div class="stat">
+            <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Projects Delivered</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual reveal">
+        <div class="orbit-ring ring-1"></div>
+        <div class="orbit-ring ring-2"></div>
+        <div class="orbit-ring ring-3"></div>
+        <div class="orbit-core">
+          <img src="assets/logo.png" alt="AIQ" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Contact ─── -->
+  <section id="contact">
+    <div class="section-inner">
+      <p class="section-label reveal">Let's Talk</p>
+      <h2 class="section-title reveal">Get In Touch</h2>
+      <form id="contactForm" class="contact-form reveal" onsubmit="return false;">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" id="name" placeholder=" " required />
+            <label for="name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder=" " required />
+            <label for="email">Email Address</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea id="message" rows="5" placeholder=" " required></textarea>
+          <label for="message">Your Message</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-submit">
+          <span>Send Message</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="AIQ" class="footer-logo" />
+        <span>AIQ</span>
+      </div>
+      <p class="footer-tagline">Smart solutions for tomorrow.</p>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 AIQ. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
