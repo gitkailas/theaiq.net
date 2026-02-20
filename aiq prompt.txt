@@ -1,0 +1,22 @@
+Create a most modern, visually stunning yet very minimalist and user friendly website with unique UI/UX features with a combination of monochromatic elements for my company. The website should be in a dark theme, clean and simple, and should look very futuristic. Tagline for the company is 'Smart solutions for tomorrow'.
+
+Company name: AIQ
+
+Services offered by my company: Application development (web, desktop and mobile), IT Infra Consulting, AI Ads and media, Automation for existing applications, Network setup.
+
+These are the services as of now. More services can be added or removed in future.
+
+The favicon for the website is in C:\Users\kaila\Documents\AIQ\The AIQ logo.png
+
+----------------------------------------------------------------------------------------
+
+I want to make these changes in my website:
+
+Remove the 'Welcome to AIQ' tagline in the homepage
+
+Add one more service in Our Services section
+service name: Web Development and Management
+
+In the homepage, on the header, add a 'Blog' section to the left of the 'Services' icon.
+
+

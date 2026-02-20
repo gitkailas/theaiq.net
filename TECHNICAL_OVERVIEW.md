@@ -17,25 +17,30 @@ This is the complete website for **AIQ** ("Smart solutions for tomorrow"). It is
 
 ```
 AIQ/
-├── index.html                        ← Main homepage
-├── blog.html                         ← Blog listing page (all posts)
-├── blog-ai-automation.html           ← Blog post: AI & Automation
-├── blog-web-tech-stack.html          ← Blog post: Web Tech Stack
-├── blog-cloud-vs-onprem.html         ← Blog post: Cloud vs On-Premise
-├── blog-ai-advertising.html          ← Blog post: AI-Powered Advertising
-├── blog-zero-trust.html              ← Blog post: Zero Trust Networks
-├── blog-digital-transformation.html  ← Blog post: Digital Transformation
-├── styles.css                        ← Global CSS (design system, layout, animations)
-├── blog.css                          ← CSS specific to the blog listing page
-├── blog-post.css                     ← CSS specific to individual blog article pages
-├── script.js                         ← Global JavaScript (canvas, nav, scroll, form)
-├── blog-reader.js                    ← Text-to-speech "Listen to Article" feature
-├── CNAME                             ← Custom domain config (theaiq.net)
+├── index.html                            ← Main homepage (must stay in root for GitHub Pages)
+├── CNAME                                 ← Custom domain config (theaiq.net)
+├── TECHNICAL_OVERVIEW.md                 ← This documentation file
+├── The AIQ logo.png                      ← Source logo file
+├── aiq prompt.txt                        ← Original design brief / requirements
 ├── assets/
-│   ├── logo.png                      ← AIQ logo used in navbar and footer
-│   └── favicon.png                   ← Browser tab icon
-├── The AIQ logo.png                  ← Source logo file
-└── aiq prompt.txt                    ← Original design brief / requirements
+│   ├── css/
+│   │   ├── styles.css                    ← Global CSS (design system, layout, animations)
+│   │   ├── blog.css                      ← CSS specific to the blog listing page
+│   │   └── blog-post.css                 ← CSS specific to individual blog article pages
+│   ├── js/
+│   │   ├── script.js                     ← Global JavaScript (canvas, nav, scroll, form)
+│   │   └── blog-reader.js                ← Text-to-speech "Listen to Article" feature
+│   └── images/
+│       ├── logo.png                      ← AIQ logo used in navbar and footer
+│       └── favicon.png                   ← Browser tab icon
+└── blog/
+    ├── index.html                        ← Blog listing page (all posts)
+    ├── ai-automation.html                ← Blog post: AI & Automation
+    ├── web-tech-stack.html               ← Blog post: Web Tech Stack
+    ├── cloud-vs-onprem.html              ← Blog post: Cloud vs On-Premise
+    ├── ai-advertising.html               ← Blog post: AI-Powered Advertising
+    ├── zero-trust.html                   ← Blog post: Zero Trust Networks
+    └── digital-transformation.html       ← Blog post: Digital Transformation
 ```
 
 ---
@@ -55,7 +60,7 @@ AIQ/
 
 ---
 
-## 4. Global Design System (`styles.css`)
+## 4. Global Design System (`assets/css/styles.css`)
 
 All visual design is controlled through **CSS custom properties** (also called CSS variables). This means changing a single variable automatically updates every element that uses it.
 
@@ -152,7 +157,7 @@ Each card has:
 
 ---
 
-## 6. Canvas Background (`script.js`)
+## 6. Canvas Background (`assets/js/script.js`)
 
 The entire site has an **animated grid background** drawn on an HTML `<canvas>` element. Here's how it works:
 
@@ -165,7 +170,7 @@ The entire site has an **animated grid background** drawn on an HTML `<canvas>` 
 
 ---
 
-## 7. Scroll Reveal Animations (`script.js`)
+## 7. Scroll Reveal Animations (`assets/js/script.js`)
 
 Elements with the CSS class `.reveal` are **hidden by default** (opacity 0, shifted downward). When they scroll into the viewport, JavaScript adds the `.active` class, which triggers a smooth fade-in + slide-up animation.
 
@@ -183,7 +188,7 @@ How it works:
 
 ## 8. Blog System
 
-### 8.1 Blog Listing Page (`blog.html` + `blog.css`)
+### 8.1 Blog Listing Page (`blog/index.html` + `assets/css/blog.css`)
 
 - Displays **6 blog post cards** in a responsive grid (3 columns → 2 → 1 on smaller screens)
 - Each card shows: category badge, title, excerpt, date, and read time
@@ -191,7 +196,7 @@ How it works:
 - Cards use the same `.reveal` scroll animation as the rest of the site
 - The `.blog-card-link` wrapper uses `display: contents` so it doesn't affect the grid layout
 
-### 8.2 Individual Blog Posts (`blog-*.html` + `blog-post.css`)
+### 8.2 Individual Blog Posts (`blog/*.html` + `assets/css/blog-post.css`)
 
 All 6 blog posts follow the same template structure:
 
@@ -224,16 +229,16 @@ All 6 blog posts follow the same template structure:
 
 | File | Topic | Read Time |
 | ---- | ----- | --------- |
-| `blog-ai-automation.html` | How AI is revolutionizing business automation | 5 min |
-| `blog-web-tech-stack.html` | AIQ's frontend & backend tech stack explained | 7 min |
-| `blog-cloud-vs-onprem.html` | Cloud vs on-premise infrastructure comparison | 6 min |
-| `blog-ai-advertising.html` | How AI powers modern digital advertising | 4 min |
-| `blog-zero-trust.html` | Zero Trust network security explained | 5 min |
-| `blog-digital-transformation.html` | 5 signs your business is ready to modernize | 6 min |
+| `blog/ai-automation.html` | How AI is revolutionizing business automation | 5 min |
+| `blog/web-tech-stack.html` | AIQ's frontend & backend tech stack explained | 7 min |
+| `blog/cloud-vs-onprem.html` | Cloud vs on-premise infrastructure comparison | 6 min |
+| `blog/ai-advertising.html` | How AI powers modern digital advertising | 4 min |
+| `blog/zero-trust.html` | Zero Trust network security explained | 5 min |
+| `blog/digital-transformation.html` | 5 signs your business is ready to modernize | 6 min |
 
 ---
 
-## 9. Text-to-Speech — "Listen to Article" (`blog-reader.js`)
+## 9. Text-to-Speech — "Listen to Article" (`assets/js/blog-reader.js`)
 
 Every blog post has a **"Listen to Article"** button at the top. This uses the browser's built-in **Web Speech API** — no external services, no API keys, no costs.
 
@@ -275,14 +280,14 @@ The **stop button** is a small circle next to the main button — hidden by defa
 
 2. Add this script tag before `</body>`:
 ```html
-<script src="blog-reader.js"></script>
+<script src="../assets/js/blog-reader.js"></script>
 ```
 
 That's it — the script auto-detects the article content and handles everything.
 
 ---
 
-## 10. JavaScript Safety Guards (`script.js`)
+## 10. JavaScript Safety Guards (`assets/js/script.js`)
 
 The same `script.js` runs on every page, but not every page has the same elements. To prevent errors:
 
@@ -322,12 +327,12 @@ Changes typically go live within **1–2 minutes** after pushing.
 
 ## 12. Creating a New Blog Post (Step-by-Step)
 
-1. **Copy** any existing `blog-*.html` file and rename it (e.g., `blog-new-topic.html`)
+1. **Copy** any existing blog post from `blog/` and rename it (e.g., `blog/new-topic.html`)
 2. **Update** the `<title>`, `<meta description>`, article badge, title, date, and read time in the hero
 3. **Replace** the article body content between `<div class="article-content">` and the closing `</div>`
 4. **Keep** the back-to-blog link, listen bar, and CTA section intact
-5. **Add a card** on `blog.html` — copy an existing `<a class="blog-card-link">...</a>` block and update:
-   - The `href` to point to your new file
+5. **Add a card** on `blog/index.html` — copy an existing `<a class="blog-card-link">...</a>` block and update:
+   - The `href` to point to your new file (e.g., `new-topic.html`)
    - The badge, title, excerpt, date, and read time
 6. **Commit and push** — the new post goes live automatically
 
