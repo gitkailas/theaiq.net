@@ -71,6 +71,22 @@
                 Back to Blog
             </a>
 
+            <div class="listen-bar">
+                <button id="listenBtn" class="listen-btn" data-state="idle">
+                    <span class="listen-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3" />
+                        </svg></span>
+                    <span class="listen-label">Listen to Article</span>
+                </button>
+                <button id="listenStopBtn" class="listen-stop-btn" aria-label="Stop">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                    </svg>
+                </button>
+            </div>
+
             <p>If you run a business today, one of the biggest technology decisions you will face is: <strong>where
                     should your data, applications, and systems live?</strong> Should you store everything on your own
                 computers (on-premise), or rent space from a cloud provider like Amazon, Microsoft, or Google?</p>
@@ -134,7 +150,8 @@
             <h2>The hybrid approach</h2>
 
             <p>Here is the thing — <strong>you do not have to pick just one</strong>. Many businesses in 2026 use a
-                <strong>hybrid approach</strong>, combining on-premise and cloud. For example:</p>
+                <strong>hybrid approach</strong>, combining on-premise and cloud. For example:
+            </p>
 
             <ul>
                 <li>Keep sensitive customer data on your own servers for maximum control</li>
@@ -193,6 +210,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="blog-reader.js"></script>
 </body>
 
 </html>
