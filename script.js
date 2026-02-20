@@ -118,21 +118,23 @@
   /* ─── Stat Counter Animation ─── */
   const statNumbers = document.querySelectorAll('.stat-number');
 
-  const statObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const target = parseInt(el.getAttribute('data-target'), 10);
-          animateCount(el, 0, target, 1500);
-          statObserver.unobserve(el);
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
+  if (statNumbers.length) {
+    const statObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.getAttribute('data-target'), 10);
+            animateCount(el, 0, target, 1500);
+            statObserver.unobserve(el);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
 
-  statNumbers.forEach((el) => statObserver.observe(el));
+    statNumbers.forEach((el) => statObserver.observe(el));
+  }
 
   function animateCount(el, start, end, duration) {
     const range = end - start;
@@ -152,18 +154,20 @@
   /* ─── Contact Form Feedback ─── */
   const form = document.getElementById('contactForm');
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('.btn-submit span');
-    const originalText = btn.textContent;
-    btn.textContent = 'Message Sent!';
-    btn.parentElement.style.background = '#00cc66';
-    setTimeout(() => {
-      btn.textContent = originalText;
-      btn.parentElement.style.background = '';
-      form.reset();
-    }, 2500);
-  });
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.btn-submit span');
+      const originalText = btn.textContent;
+      btn.textContent = 'Message Sent!';
+      btn.parentElement.style.background = '#00cc66';
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.parentElement.style.background = '';
+        form.reset();
+      }, 2500);
+    });
+  }
 
   /* ─── Smooth Scroll for Safari ─── */
   document.querySelectorAll('a[href^="#"]').forEach((link) => {

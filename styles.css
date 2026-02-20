@@ -5,42 +5,48 @@
 /* ─── Design Tokens ─── */
 :root {
   /* Base */
-  --bg-primary:    #060610;
-  --bg-secondary:  #0c0c1d;
-  --bg-card:       rgba(12, 14, 30, 0.6);
+  --bg-primary: #060610;
+  --bg-secondary: #0c0c1d;
+  --bg-card: rgba(12, 14, 30, 0.6);
 
   /* Monochromatic Blue Palette */
-  --accent:        #00a2ff;
-  --accent-dark:   #0066cc;
-  --accent-light:  #66ccff;
-  --accent-glow:   rgba(0, 162, 255, 0.15);
+  --accent: #00a2ff;
+  --accent-dark: #0066cc;
+  --accent-light: #66ccff;
+  --accent-glow: rgba(0, 162, 255, 0.15);
   --accent-glow-s: rgba(0, 162, 255, 0.35);
 
   /* Text */
-  --text-primary:   #e8eaf0;
+  --text-primary: #e8eaf0;
   --text-secondary: #8a8fa8;
-  --text-muted:     #4a4f6a;
+  --text-muted: #4a4f6a;
 
   /* Borders */
-  --border:        rgba(255, 255, 255, 0.06);
-  --border-hover:  rgba(0, 162, 255, 0.3);
+  --border: rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(0, 162, 255, 0.3);
 
   /* Layout */
-  --max-width:     1200px;
-  --nav-height:    72px;
-  --section-pad:   120px 24px;
-  --radius:        16px;
-  --radius-sm:     10px;
+  --max-width: 1200px;
+  --nav-height: 72px;
+  --section-pad: 120px 24px;
+  --radius: 16px;
+  --radius-sm: 10px;
 
   /* Fonts */
-  --font:          'Inter', system-ui, -apple-system, sans-serif;
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Transitions */
-  --ease:          cubic-bezier(0.22, 1, 0.36, 1);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* ─── Reset ─── */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
@@ -57,10 +63,25 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a { color: inherit; text-decoration: none; }
-img { max-width: 100%; display: block; }
-ul { list-style: none; }
-button { cursor: pointer; font-family: inherit; border: none; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+}
 
 /* ─── Canvas Background ─── */
 #gridCanvas {
@@ -229,8 +250,17 @@ button { cursor: pointer; font-family: inherit; border: none; }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
-  50%      { opacity: 0.7; transform: translate(-50%, -50%) scale(1.15); }
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
 }
 
 .hero-content {
@@ -298,7 +328,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
 }
 
 .btn-primary:hover {
-  box-shadow: 0 0 30px var(--accent-glow-s), 0 4px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 0 30px var(--accent-glow-s), 0 4px 20px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
 }
 
@@ -495,12 +525,32 @@ section {
   animation: orbit-spin linear infinite;
 }
 
-.ring-1 { width: 70%; height: 70%; animation-duration: 20s; border-color: rgba(0,162,255,0.08); }
-.ring-2 { width: 85%; height: 85%; animation-duration: 30s; animation-direction: reverse; border-color: rgba(0,162,255,0.05); }
-.ring-3 { width: 100%; height: 100%; animation-duration: 40s; border-color: rgba(0,162,255,0.03); }
+.ring-1 {
+  width: 70%;
+  height: 70%;
+  animation-duration: 20s;
+  border-color: rgba(0, 162, 255, 0.08);
+}
+
+.ring-2 {
+  width: 85%;
+  height: 85%;
+  animation-duration: 30s;
+  animation-direction: reverse;
+  border-color: rgba(0, 162, 255, 0.05);
+}
+
+.ring-3 {
+  width: 100%;
+  height: 100%;
+  animation-duration: 40s;
+  border-color: rgba(0, 162, 255, 0.03);
+}
 
 /* Orbit dots */
-.ring-1::after, .ring-2::after, .ring-3::after {
+.ring-1::after,
+.ring-2::after,
+.ring-3::after {
   content: '';
   position: absolute;
   width: 8px;
@@ -513,12 +563,30 @@ section {
   box-shadow: 0 0 12px var(--accent-glow-s);
 }
 
-.ring-2::after { width: 6px; height: 6px; top: auto; bottom: -3px; background: var(--accent-light); }
-.ring-3::after { width: 5px; height: 5px; left: -2px; top: 50%; background: var(--accent-dark); }
+.ring-2::after {
+  width: 6px;
+  height: 6px;
+  top: auto;
+  bottom: -3px;
+  background: var(--accent-light);
+}
+
+.ring-3::after {
+  width: 5px;
+  height: 5px;
+  left: -2px;
+  top: 50%;
+  background: var(--accent-dark);
+}
 
 @keyframes orbit-spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .orbit-core {
@@ -593,10 +661,10 @@ section {
   transition: all 0.25s var(--ease);
 }
 
-.form-group input:focus ~ label,
-.form-group input:not(:placeholder-shown) ~ label,
-.form-group textarea:focus ~ label,
-.form-group textarea:not(:placeholder-shown) ~ label {
+.form-group input:focus~label,
+.form-group input:not(:placeholder-shown)~label,
+.form-group textarea:focus~label,
+.form-group textarea:not(:placeholder-shown)~label {
   top: -10px;
   left: 14px;
   font-size: 0.75rem;
@@ -700,11 +768,29 @@ section {
 }
 
 /* Stagger service cards */
-.service-card.reveal:nth-child(1) { transition-delay: 0s; }
-.service-card.reveal:nth-child(2) { transition-delay: 0.1s; }
-.service-card.reveal:nth-child(3) { transition-delay: 0.2s; }
-.service-card.reveal:nth-child(4) { transition-delay: 0.3s; }
-.service-card.reveal:nth-child(5) { transition-delay: 0.4s; }
+.service-card.reveal:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.service-card.reveal:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.service-card.reveal:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.service-card.reveal:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.service-card.reveal:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.service-card.reveal:nth-child(6) {
+  transition-delay: 0.5s;
+}
 
 /* ─── Responsive ─── */
 @media (max-width: 1024px) {
@@ -719,7 +805,9 @@ section {
   }
 
   /* Mobile nav */
-  .menu-toggle { display: flex; }
+  .menu-toggle {
+    display: flex;
+  }
 
   .nav-links {
     position: fixed;
