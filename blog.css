@@ -7,6 +7,13 @@
     color: var(--accent) !important;
 }
 
+/* ─── Blog Card Link Wrapper ─── */
+.blog-card-link {
+    display: contents;
+    text-decoration: none;
+    color: inherit;
+}
+
 .nav-active::after {
     width: 100% !important;
 }
